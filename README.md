@@ -16,3 +16,5 @@ header.hについて
 関数func7は行列Bの逆行列を返す。
 ## (8)
 関数func8は2つの行列A,Bの積ABの転置を返す。（{AB}^T = {B^T}{A^T}であるが今回は左辺の計算方法を用いた。)
+
+![Image of Q3](images/Q3.png)
