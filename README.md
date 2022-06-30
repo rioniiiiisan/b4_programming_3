@@ -1,20 +1,59 @@
 # 問3
-header.hについて
-## (1)
-関数func1は2つのベクトルx,yの和を返す。
-## (2)
-関数func2は2つのベクトルx,yの内積を返す。
-## (3)
-関数func3は縦ベクトルx,yについて、xの転置（横ベクトル）とy（縦ベクトル)の積を返す。計算自体はfunc2と同じである。
-## (4)
-関数func4は行列Aと縦ベクトルxの積を返す。
-## (5)
-関数func5は2つの行列A,Bの積を返す。
-## (6)
-関数func6は2つの行列B,Aの積を返す。
-## (7)
-関数func7は行列Bの逆行列を返す。
-## (8)
-関数func8は2つの行列A,Bの積ABの転置を返す。（{AB}^T = {B^T}{A^T}であるが今回は左辺の計算方法を用いた。)
+funcs.c
+## (1)function:func1  
+returns: $\boldsymbol{x}+\boldsymbol{y}$  
+Arg1: $\boldsymbol{x}\in\mathbb{R}^2$  
+Arg2: $\boldsymbol{y}\in\mathbb{R}^2$  
+```
+Vector func1(Vector x, Vector y);
+```
+## (2)function:func2 
+returns: $\boldsymbol{x}\cdot\boldsymbol{y}$  
+Arg1: $\boldsymbol{x}\in\mathbb{R}^2$  
+Arg2: $\boldsymbol{y}\in\mathbb{R}^2$  
+```
+double func2(Vector x, Vector y);
+```
+## (3)function:func3
+returns: ${}^t\boldsymbol{x}\boldsymbol{y}$  
+Arg1: $\boldsymbol{x}\in\mathbb{R}^2$  
+Arg2: $\boldsymbol{y}\in\mathbb{R}^2$  
+```
+double func3(Vector x, Vector y);
+```
+## (4)function:func4
+returns: $A\boldsymbol{x}$  
+Arg1: $A\in M(2,2)$  
+Arg2: $\boldsymbol{x}\in\mathbb{R}^2$  
+```
+Vector func4(Matrix A, Vector x);
+```
+## (5)function:func5
+returns: $AB$  
+Arg1: $A\in M(2,2)$  
+Arg2: $B\in M(2,2)$  
+```
+Matrix func5(Matrix A, Matrix B);
+```
+## (6)function:func6
+returns: $BA$  
+Arg1: $B\in M(2,2)$  
+Arg2: $A\in M(2,2)$  
+```
+Matrix func6(Matrix B, Matrix A);
+```
+## (7)function:func7
+returns: $B^{-1}$  
+Arg1: $B\in M(2,2)$  
+```
+Matrix func7(Matrix B);
+```
+## (8)function:func8
+returns: ${}^t (AB)$  
+Arg1: $A\in M(2,2)$  
+Arg2: $B\in M(2,2)$ 
+```
+Matrix func8(Matrix A, Matrix B);
+```
 
 ![Image of Q3](images/Q3.png)
